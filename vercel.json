@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/v1/:path*",
-      "destination": "http://18.185.49.239:8000/api/v1/:path*"
+      "src": "^/api/v1/(.*)$",
+      "methods": ["GET","POST","PUT","PATCH","DELETE"],
+      "dest": "http://18.185.49.239:8000/api/v1/$1"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/.*",
+      "dest": "/index.html"
     }
   ]
 }
