@@ -2,11 +2,10 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/v1/(.)",
+      "src": "^/api/v1/(.)$",
       "dest": "http://18.185.49.239:8000/api/v1/$1",
-      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+      "methods": ["GET","POST","PUT","PATCH","DELETE"]
     },
-
     { "src": "/(.)", "dest": "/index.html" }
   ]
 }
