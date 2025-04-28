@@ -23,7 +23,7 @@ async function makeConfig(useIdToken = false): Promise<Configuration> {
     }
 
     return new Configuration({
-        basePath: '',
+        basePath: '/api/v1',
         accessToken: () => raw,
     });
 }
